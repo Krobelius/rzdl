@@ -68,9 +68,11 @@
             <p>Телефон: +7 (861) 42-72-500</p>
             <p>Почта: razdolnoe2011@mail.ru</p>
         </div>
+{{--        этот блок показывается только если юзер не залогинен--}}
         @guest()
             <button class="lk-btn" data-toggle="modal" data-target="#authModal">Личный кабинет</button>
         @endguest
+{{--        а этот - наоборот, если залогинен--}}
         @auth()
             <div>
                 <p>{{\Illuminate\Support\Facades\Auth::user()->email}}</p>
@@ -79,10 +81,10 @@
         @endauth
     </div>
     <nav class="navigation-bar">
-        <a href="/#about-us" class="nav-link">О нас</a>
-        <a href="/#catalog" class="nav-link">Каталог </a>
-        <a href="/#news" class="nav-link">Новости</a>
-        <a href="/#contactss" class="nav-link">Контакты</a>
+        <a style="color: white" href="/#about-us" class="nav-link">О нас</a>
+        <a style="color: white" href="/#catalog" class="nav-link">Каталог </a>
+        <a style="color: white" href="/#news" class="nav-link">Новости</a>
+        <a style="color: white" href="/#contactss" class="nav-link">Контакты</a>
     </nav>
 </header>
 @yield('content')

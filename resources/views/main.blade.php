@@ -65,12 +65,14 @@
             <h1>Каталог</h1>
         </div>
         <section class="catalog" id="catalog">
+{{--            вывожу в цикле категории--}}
             @foreach(\App\Models\Category::all() as $cat)
                 <div class="catalog-items-container">
                     <h4 class="catalog-item-header">
                         {{$cat->name}}
                     </h4>
                     <div class="catalog-grid">
+{{--                        вывожу в цикле продукты соотв. категории--}}
                         @foreach(\App\Models\Product::where('category',$cat->id)->get() as $product)
                             <div class="catalog-grid-item">
                                 <h5 class="catalog-grid-item__header">

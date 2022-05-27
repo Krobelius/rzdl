@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
+    //функция добавления заказа
     public function add(\Illuminate\Http\Request $request)
     {
         $user = Auth::user();
@@ -18,6 +19,7 @@ class OrderController extends Controller
         return response('success');
     }
 
+    //функция установки комментария к заказу
     public function setComment(\Illuminate\Http\Request $request)
     {
         $comm = $request->get('comment');

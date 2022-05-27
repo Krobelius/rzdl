@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 
 class RegController extends Controller
 {
+    //функция регистрации - проверяет эмейл и пароль на требования, создает нового пользователя, сохраняет его в базе и авторизует
     public function reg(Request $request)
     {
         $valid = Validator::make($request->all(),[

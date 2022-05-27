@@ -13,6 +13,7 @@
                             <h2>Товары</h2>
                         </div>
                         <div class="order-positions-list">
+{{--                            вывожу в поле продукты, добавленные в заказы юзера--}}
                             @foreach(\App\Models\Order::where('userid',\Illuminate\Support\Facades\Auth::id())->get() as $order)
                                 <p>{{$order->products}}</p>
                             @endforeach

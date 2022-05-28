@@ -79,7 +79,7 @@
                                     {{$product->name}}
                                 </h5>
                                 <div class="catalog-image">
-                                    <img src="{{asset($product->imageUrl)}}">
+                                    <img width="277px" height="277px" src="{{asset($product->imageUrl)}}">
                                 </div>
                                 <div class="catalog-grid-item__buttons">
                                     <a class="link-catalog" data-product="{{$product->name}}" tabindex="0">Добавить в заявку</a>
